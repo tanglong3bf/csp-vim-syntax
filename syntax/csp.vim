@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language:        csp
-" Version:         0.1
+" Version:         0.1.1
 " Maintainer:      tanglong3bf <tanglong3bf@163.com>
 " Last Change:     2022 Aug 28
 
@@ -22,8 +22,8 @@ syn region cspScriptlet matchgroup=cspTag start=/<%inc/ end=/%>/ keepend contain
 syn region cspState matchgroup=cspTag start=/<%c++/ end=/%>/ keepend contains=@cpp,cspHttpViewData,cspStream
 syn region cspVariable matchgroup=cspTag start=/\[\[/ end=/\]\]/ oneline
 syn region cspExpression matchgroup=cspTag start=/{%/ end=/%}/ keepend contains=cString oneline
-syn region cspViewTag matchgroup=cspTag start=/{%view/ end=/%}/ keepend oneline
-syn region cspLayoutTag matchgroup=cspTag start=/{%layout/ end=/%}/ keepend oneline
+syn region cspViewTag matchgroup=cspTag start=/<%view/ end=/%>/ keepend oneline
+syn region cspLayoutTag matchgroup=cspTag start=/<%layout/ end=/%>/ keepend oneline
 
 syn clear htmlTag
 syn region htmlTag start=+<[^/%]+ end=+>+ contains=htmlTagN,htmlString,htmlArg,htmlValue,htmlTagError,htmlEvent,htmlCssDefinition,@htmlPreproc,@htmlArgCluster,cspExpression,javaScript
